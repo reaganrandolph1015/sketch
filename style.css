@@ -14,5 +14,10 @@
     border: 1px solid #ddd;
     text-align: center;
     aspect-ratio: 1;
+    background-color: white;
+}
+
+.gridBack {
+    background-color: red;
 }
 

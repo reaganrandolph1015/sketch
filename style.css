@@ -10,7 +10,6 @@
 }
 
 .gridItem {
-    color: red;
     padding: 1em;
     border: 1px solid #ddd;
     text-align: center;
@@ -20,4 +19,3 @@
 .gridBack {
     background-color: red;
 }
-

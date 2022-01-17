@@ -14,14 +14,24 @@ function makeGrid(rows, cols) {
         // highlights on mouseover
         e.target.classList.add('gridHover')
         );
-        container.appendChild(cell).className = "gridItem";
+        container.appendChild(cell).className += " gridItem";
     };
 };
+let wholeGrid = document.getElementsByClassName('gridItem');
 
 // function for color change on mouseover
-//const boxes = document.getElementById('cell_id');
-//boxes.classList.remove('gridHover')
-
+function reset() {
+    for (gridItem of wholeGrid) {
+        gridItem.style.backgroundColor = "white";
+    }
+}
+    /*
+    for (i = 0; i < 1000; i++) {
+    if (document.getElementById('cell_id').classList.contains('gridHover')) {
+    document.getElementById('cell_id').classList.remove('gridHover');
+        }
+    }
+*/
 // function for game reset on button click
 
 // makes 16x16 grid

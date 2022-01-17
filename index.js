@@ -17,13 +17,17 @@ function makeGrid(rows, cols) {
         container.appendChild(cell).className += " gridItem";
     };
 };
-let wholeGrid = document.getElementsByClassName('gridItem');
+let wholeGrid = document.getElementsByClassName('gridHover');
 
 // function for color change on mouseover
 function reset() {
-    for (gridItem of wholeGrid) {
-        gridItem.style.backgroundColor = "white";
+    while (wholeGrid.length) {
+        wholeGrid[0].classList.remove('gridHover');
     }
+
+    let numberSquare = prompt("How many squares for the rows/columns would you like?")
+    let num = parseInt(numberSquare);
+    makeGrid(num, num);
 }
     /*
     for (i = 0; i < 1000; i++) {

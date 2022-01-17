@@ -5,13 +5,19 @@
 
 #container {
     display: grid;
+    justify-self: center;
+    margin: auto;
+    margin-top: 2em;
+    height: 80vh;
+    width: 80vh;
+    max-height: 82vh;
+    max-width: 82vh;
     grid-template-rows: repeat(var(--grid-rows), 1fr);
     grid-template-columns: repeat(var(--grid-cols), 1fr);
 }
 
 .gridItem {
-    padding: 1em;
-    border: 1px solid #ddd;
+    border: .5px solid #ddd;
     text-align: center;
     aspect-ratio: 1;
 }

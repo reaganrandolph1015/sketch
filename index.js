@@ -17,26 +17,35 @@ function makeGrid(rows, cols) {
         container.appendChild(cell).className += " gridItem";
     };
 };
-let wholeGrid = document.getElementsByClassName('gridHover');
+
+// deletes grid
+function deleteGrid() {
+    let cell = document.querySelectorAll('.gridItem');
+    cell.forEach(cell => {
+        container.removeChild(cell);
+    });
+}
 
 // function for color change on mouseover
 function reset() {
+    // var for cels with red bg
+    let wholeGrid = document.getElementsByClassName('gridHover');
+    // takes cell with class name 'gridHover' and removes them
     while (wholeGrid.length) {
         wholeGrid[0].classList.remove('gridHover');
     }
-
-    let numberSquare = prompt("How many squares for the rows/columns would you like?")
+    // prompt for next round 
+    let numberSquare = prompt("How many squares for the rows/columns would you like?(≤100)")
     let num = parseInt(numberSquare);
-    makeGrid(num, num);
-}
-    /*
-    for (i = 0; i < 1000; i++) {
-    if (document.getElementById('cell_id').classList.contains('gridHover')) {
-    document.getElementById('cell_id').classList.remove('gridHover');
-        }
+
+    deleteGrid();
+    // 100 max for user input
+    if (num <= 100) {
+        makeGrid(num, num);
+    } else {
+        return alert("Error!");
     }
-*/
-// function for game reset on button click
+}
 
 // makes 16x16 grid
 makeGrid(16, 16)
